@@ -8,17 +8,19 @@
 </head>
 <body>
     <div id="app">
-        <input type="text" name="name" />
+        <input type="text" name="name" style="margin: 20px;"/>
         <button class="button">Adicionar</button>
     </div>
+    
     <script>
-        let inputElement = document.querySelector('input[name=name'); //Recupera valor de dentro do input com nome de name
-        let btnElement = document.querySelector('button.button'); 
-
-        btnElement.onclick = function(){  //invoca o evento onclick em btnElement e o atribui a outro método
-            let text = inputElement.value; 
-            alert(`${text} você clicou!`);
+        let btnAdd = document.querySelector('button.button');
+        btnAdd.onclick = function (){
+            let input = document.querySelector('input[name=name'); 
+            let newButton = document.createElement('input');
+            let containnerElement = document.querySelector('#app');
+            containnerElement.appendChild(newButton);
         }
+       
     </script>
 </body>
 </html>
