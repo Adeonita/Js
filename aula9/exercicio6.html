@@ -19,12 +19,32 @@
         let space = document.querySelector('#app');
         button.onclick = function(){    
             let quadrado = document.createElement('div');
+            quadrado.classList.add('quadrado');
             quadrado.style.width = '100px';
             quadrado.style.height = '100px';
             quadrado.style.backgroundColor = 'black';
             quadrado.style.margin = '10px';
             space.appendChild(quadrado);
+            /**
+             * function getRandomColor : Seta cores aleatórias para o quadrado que o mouse está passando
+            */
+            quadrado.onmouseover =  function getRandomColor() {//O elemento quadrado só existe aqui dentro, portanto não é possivel tentar seleciona-lo com querySelector fora porque ele não existe
+                var letters = "0123456789ABCDEF"; //Combinação de letras para gerar as cores
+                var color = "#";  //As letras em hexa começam com #
+                for (var i = 0; i < 6; i++) { //Percorre o for de 0 a 6
+                //letters - é o array de letra
+                //Math.floor - Arredonda para o menor
+                //Math.random() * 16 - Seleciona um indice aleatorio entre 16
+                color += letters[Math.floor(Math.random() * 16)];  //Dentro do array de letras sorteia 6 itens aleatórios 
+                }
+
+                quadrado.style.backgroundColor = color;            
+            }
+
         }
+
+        
+        
     </script>
 </body>
 </html>
