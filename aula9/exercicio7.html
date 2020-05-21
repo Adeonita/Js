@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul>
+        </ul>
+    </div>
+    <script>
+        let list = document.querySelector('ul');
+        let nomes = ['Diego', 'Gabriel', 'Lucas'];
+        for(var i= 0; i < nomes.length; i++){
+            let item = document.createElement('li'); //creat after add
+            let li = list.appendChild(item).append(nomes[i]);  //appendChild only elements html
+                                                                //frist appendChild(<li>) after append[nomes[i]], one line every loop
+        }
+
+    </script>
+</body>
+</html>
