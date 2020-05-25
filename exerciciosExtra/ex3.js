@@ -14,6 +14,6 @@
     return profissao == 'Músico' && nacionalidade == 'Brasil' && kmDia > 2;
  }
 
- filosofoHipster('Músico', 'Brasil', 5) // true
- filosofoHipster('Músico', 'Argentina', 1) // false
- filosofoHipster('Docente', 'Canadá', 12) // false
+ console.log(filosofoHipster('Músico', 'Brasil', 5)); // true
+ console.log(filosofoHipster('Dentista', 'Suíça', 2)); // false
+ console.log(filosofoHipster('Médico', 'Bolívia', 10)); // false
