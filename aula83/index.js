@@ -1,0 +1,1 @@
+const person = new person(fistName, lastName);
